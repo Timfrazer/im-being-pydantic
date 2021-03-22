@@ -1,5 +1,4 @@
-from enum import Enum
-from typing import Optional, Tuple
+from typing import Optional
 
 from fastapi import FastAPI
 from pydantic import BaseModel
@@ -7,19 +6,10 @@ from pydantic import BaseModel
 app = FastAPI()
 
 
-class Battery(str, Enum):
-    standard = "standard"
-    long_range = "long range"
-
-
-class TeslaCarModels(str, Enum):
-    pass
-
-
 class Tesla(BaseModel):
-    style: str
-    battery_pack: Tuple[Battery, ...]
-    insane_mode: Optional[bool] = None
+    name: Optional[str]
+    price: Optional[float]
+    quantity: int = 0
 
 
 def make_order(tesla: Tesla):
@@ -27,7 +17,17 @@ def make_order(tesla: Tesla):
     return {"tesla": tesla}
 
 
+@app.get("/")
+async def index():
+    return {"index": "hi this is the index"}
+
+
 @app.post("/order/tesla")
 async def order_tesla(tesla: Tesla):
     order = make_order(tesla)
     return order
+
+
+@app.get("/track/{tesla_id}")
+def get_order(tesla_id: int, q: Optional[str] = None):
+    return {"tesla_id": tesla_id, "q": q}
