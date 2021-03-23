@@ -14400,7 +14400,7 @@ Traditionally, the Python interpreter handles types in a flexible but implicit w
 </div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">dataclasses</span> <span class="kn">import</span> <span class="n">dataclass</span>
@@ -14433,7 +14433,7 @@ Traditionally, the Python interpreter handles types in a flexible but implicit w
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[25]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[26]:</div>
 
 
 
@@ -14456,7 +14456,7 @@ Traditionally, the Python interpreter handles types in a flexible but implicit w
 </div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">dir</span><span class="p">(</span><span class="n">truck</span><span class="p">)</span>
@@ -14475,7 +14475,7 @@ Traditionally, the Python interpreter handles types in a flexible but implicit w
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[4]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[27]:</div>
 
 
 
@@ -14527,10 +14527,10 @@ Traditionally, the Python interpreter handles types in a flexible but implicit w
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="What-happens-when-you-use-the-wrong-types?">What happens when you use the wrong types?<a class="anchor-link" href="#What-happens-when-you-use-the-wrong-types?">&#182;</a></h2>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[64]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">truck</span><span class="o">=</span><span class="n">Truck</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">price</span><span class="o">=</span><span class="s1">&#39;50000&#39;</span><span class="p">,</span><span class="n">quantity</span><span class="o">=</span><span class="s1">&#39;ten&#39;</span><span class="p">)</span>
@@ -14598,36 +14598,22 @@ Traditionally, the Python interpreter handles types in a flexible but implicit w
 <p>pydantic allows custom data types to be defined or you can extend validation with methods on a model decorated with the validator decorator. dataclasses integration. As well as BaseModel, pydantic provides a dataclass decorator which creates (almost) vanilla python dataclasses with input data parsing and validation.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Optional</span>
-<span class="kn">from</span> <span class="nn">pydantic</span> <span class="kn">import</span> <span class="n">BaseModel</span>
-
-
-<span class="k">class</span> <span class="nc">Tesla</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
-    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
-    <span class="n">price</span><span class="p">:</span> <span class="nb">float</span>
-    <span class="n">quantity</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
-        
-<span class="n">tesla</span><span class="o">=</span><span class="n">Tesla</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;model 3&#39;</span><span class="p">,</span> <span class="n">price</span><span class="o">=</span><span class="mi">50000</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
 </div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[70]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tesla</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">pydantic</span> <span class="kn">import</span> <span class="n">BaseModel</span>
+
+<span class="c1"># basic tesla model</span>
+<span class="k">class</span> <span class="nc">Tesla</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">price</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">quantity</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># default value</span>
+        
+<span class="n">tesla</span><span class="o">=</span><span class="n">Tesla</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;model 3&#39;</span><span class="p">,</span> <span class="n">price</span><span class="o">=</span><span class="mi">50000</span><span class="p">)</span>
+<span class="n">tesla</span>
 </pre></div>
 
      </div>
@@ -14643,7 +14629,7 @@ Traditionally, the Python interpreter handles types in a flexible but implicit w
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[20]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[70]:</div>
 
 
 
@@ -14658,32 +14644,20 @@ Traditionally, the Python interpreter handles types in a flexible but implicit w
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[72]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#What happens when you make them optional?</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Optional</span>
 <span class="k">class</span> <span class="nc">Tesla</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
     <span class="n">name</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
     <span class="n">price</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span>
     <span class="n">quantity</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">tesla</span><span class="o">=</span><span class="n">Tesla</span><span class="p">()</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Tesla</span><span class="p">()</span>
+<span class="n">tesla</span>
 </pre></div>
 
      </div>
@@ -14699,7 +14673,7 @@ Traditionally, the Python interpreter handles types in a flexible but implicit w
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[22]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[72]:</div>
 
 
 
@@ -14714,10 +14688,17 @@ Traditionally, the Python interpreter handles types in a flexible but implicit w
 
 </div>
 
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="What-about-clear-validation?">What about clear validation?<a class="anchor-link" href="#What-about-clear-validation?">&#182;</a></h1><p>Let's wrap the tesla in a try/catch and print out in json to make it easier to read.</p>
+<p><a href="https://pydantic-docs.helpmanual.io/usage/validators/">https://pydantic-docs.helpmanual.io/usage/validators/</a></p>
+
+</div>
 </div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[73]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">pydantic</span> <span class="kn">import</span> <span class="n">ValidationError</span>
@@ -14765,13 +14746,13 @@ Traditionally, the Python interpreter handles types in a flexible but implicit w
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="What-happens-when-you-try-type-coercion-?">What happens when you try type coercion ?<a class="anchor-link" href="#What-happens-when-you-try-type-coercion-?">&#182;</a></h1><p>Hint -&gt; Strings, bytes or floats will be coerced if possible</p>
+<h1 id="What-happens-when-you-try-type-coercion-?">What happens when you try type coercion ?<a class="anchor-link" href="#What-happens-when-you-try-type-coercion-?">&#182;</a></h1><p><strong>Hint -&gt; Strings, bytes or floats will be coerced if possible</strong></p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[74]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">try</span><span class="p">:</span>
@@ -14794,7 +14775,7 @@ Traditionally, the Python interpreter handles types in a flexible but implicit w
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[24]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[74]:</div>
 
 
 
@@ -14819,9 +14800,152 @@ Traditionally, the Python interpreter handles types in a flexible but implicit w
 <li>Datetime libary</li>
 </ul>
 <p><a href="https://pydantic-docs.helpmanual.io/usage/types/">https://pydantic-docs.helpmanual.io/usage/types/</a></p>
-<p>And many more</p>
 
 </div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="What-happens-when-you-want-it-to-be-more-strict?">What happens when you want it to be more strict?<a class="anchor-link" href="#What-happens-when-you-want-it-to-be-more-strict?">&#182;</a></h1><p>If you are looking for a 'strict' validation if and only if the validated value is of the that type or is a subtype of that type, you can use the following strict types:</p>
+<ul>
+<li>StrictStr</li>
+<li>StrictInt</li>
+<li>StrictFloat</li>
+<li>StrictBool</li>
+</ul>
+<p>There are quite a few more constraints you can add!</p>
+<p><a href="https://pydantic-docs.helpmanual.io/usage/types/#strict-types">https://pydantic-docs.helpmanual.io/usage/types/#strict-types</a></p>
+<h2 id="But-for-now-lets-start-simple">But for now lets start simple<a class="anchor-link" href="#But-for-now-lets-start-simple">&#182;</a></h2>
+</div>
+</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[60]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">pydantic</span> <span class="kn">import</span> <span class="n">BaseModel</span><span class="p">,</span> <span class="n">StrictFloat</span><span class="p">,</span> <span class="n">StrictInt</span>        
+        
+<span class="k">class</span> <span class="nc">Tesla</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+    <span class="n">name</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+    <span class="n">price</span><span class="p">:</span> <span class="n">StrictFloat</span>
+    <span class="n">quantity</span><span class="p">:</span> <span class="n">StrictInt</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">tesla</span><span class="o">=</span><span class="n">Tesla</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">price</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">quantity</span><span class="o">=</span><span class="s1">&#39;10&#39;</span><span class="p">)</span>
+<span class="k">except</span> <span class="n">ValidationError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>[
+  {
+    &#34;loc&#34;: [
+      &#34;price&#34;
+    ],
+    &#34;msg&#34;: &#34;value is not a valid float&#34;,
+    &#34;type&#34;: &#34;type_error.float&#34;
+  },
+  {
+    &#34;loc&#34;: [
+      &#34;quantity&#34;
+    ],
+    &#34;msg&#34;: &#34;value is not a valid integer&#34;,
+    &#34;type&#34;: &#34;type_error.integer&#34;
+  }
+]
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="Now-what-happens-when-we-declare-the-tesla-correctly?">Now what happens when we declare the tesla correctly?<a class="anchor-link" href="#Now-what-happens-when-we-declare-the-tesla-correctly?">&#182;</a></h1>
+</div>
+</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[61]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">tesla</span><span class="o">=</span><span class="n">Tesla</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">price</span><span class="o">=</span><span class="mf">50.00</span><span class="p">,</span> <span class="n">quantity</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="k">except</span> <span class="n">ValidationError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
+<span class="n">tesla</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[61]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>Tesla(name=&#39;3&#39;, price=50.0, quantity=1)</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="The-end">The end<a class="anchor-link" href="#The-end">&#182;</a></h1><p>There is a ton more goodness that is available in pydantic - this is from someone that prefers functional coding methods!
+I think Pydantic is probably a perfect example of object-oriented programming and a fun example of encapsulation and just abstraction that helps more than it hinders your understanding. It can help you organize your API, configuration scripts, and so many other uses without getting in the way.</p>
+<h2 id="Other-great-resources--">Other great resources -<a class="anchor-link" href="#Other-great-resources--">&#182;</a></h2><p><a href="https://pydantic-docs.helpmanual.io/">https://pydantic-docs.helpmanual.io/</a></p>
+<p><a href="https://fastapi.tiangolo.com/">https://fastapi.tiangolo.com/</a></p>
+<p><a href="http://slides.com/hultner/python-pizza-2020/#/4/0/5">http://slides.com/hultner/python-pizza-2020/#/4/0/5</a></p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
 </div></section></section>
 </div>
 </div>
